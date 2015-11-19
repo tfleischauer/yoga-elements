@@ -1,0 +1,665 @@
+/*
+Theme Name: Yoga Elements Studio Bangkok
+Theme URI: http://www.sushiseven.com
+Author: sushiseven
+Description: n/a
+Version: 1.0
+License: Commercial
+*/
+html, body {
+	font-family: Verdana;
+	font-size: 12px;
+	line-height: 16px;
+	color: #444444;
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+.clear
+{
+	clear: both;
+}
+.wrapper
+{
+	width: 998px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+.header
+{
+	float: left;
+	width: 998px;
+	padding-bottom: 10px;
+	position: relative;
+	z-index: 15;
+}
+.logo
+{
+	float: left;
+	height: 96px;
+	width: 269px;
+	padding-top: 20px;
+	padding-left: 25px;
+}
+.top_nav
+{
+	float: left;
+	width: 658px;
+	padding-top: 22px;
+	text-align: right;
+	height: 94px;
+}
+.top_nav a
+{
+	text-transform: uppercase;
+	color: #000;
+	text-decoration: none;
+	padding-bottom: 6px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #fede5a;
+	font-weight: normal;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.menu li a
+{
+	font-family: 'Source Sans Pro', sans-serif;	
+}
+.sub-menu li a
+{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: normal !important;
+}
+.icon
+{
+	padding-top: 18px;
+	text-align: right;
+	height: 98px;
+	width: 43px;
+	float: left;
+}
+.main_nav
+{
+	float: left;
+	height: 28px;
+	width: 980px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dashed;
+	border-bottom-style: dashed;
+	border-top-color: #555555;
+	border-bottom-color: #555555;
+	z-index: 20;
+	padding-left: 18px;
+}
+.slider
+{
+	float: left;
+	height: 325px;
+	width: 998px;
+	position: relative;
+	z-index: 3;
+}
+.slider img
+{
+	z-index: 5;
+}
+.slide_banner
+{
+	height: 262px;
+	width: 234px;
+	position: absolute;
+	z-index: 10;
+	top: 0px;
+	right: 13px;
+}
+.home_content, .inner_content
+{
+	float: left;
+	width: 950px;
+	padding-right: 20px;
+	padding-bottom: 25px;
+	padding-left: 28px;
+	padding-top: 20px;
+	line-height: 20px;
+}
+.inner_content
+{
+	padding-bottom: 40px;
+}
+.home_content h1, .inner_content h1
+{
+	font-size: 18px;
+	color: #000;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.home_content h2, .inner_content h2
+{
+	font-size: 16px;
+	color: #000;
+	margin: 0px;
+	padding-top: 30px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.home_content h3, .inner_content h3
+{
+	font-size: 14px;
+	color: #000;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	font-weight: normal;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.home_content h4, .inner_content h4
+{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: normal;
+}
+.home_content p
+{
+
+}
+.inner_content p
+{
+	padding-bottom: 25px;
+}
+.inner_content a
+{
+	color: #F5C402;
+}
+.inner_content a:hover
+{
+	text-decoration: none;
+}
+.healcode table
+{
+	margin-bottom: inherit !important;
+	border-collapse: inherit !important;
+}
+.healcode table tr th
+{
+	background-color: inherit !important;
+	text-transform: inherit !important;
+	font-weight: inherit !important;
+}
+.hc_info
+{
+	background-color: #F5F5F5;
+	padding: 5px;
+}
+.inner_content table
+{
+	margin-bottom: 25px;
+	border-collapse: collapse;
+}
+.inner_content table tr th
+{
+	background-color: #f5c402;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.thumb_common
+{
+	float: left;
+	width: 998px;
+	position: relative;
+	background-image: url(/wp-content/themes/yoga/images/back.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	border-bottom-width: 46px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
+	font-size: 12px;
+}
+.thumb_common h3
+{
+	font-size: 16px;
+	color: #000;
+	margin: 0px;
+	padding-top: 15px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+	font-weight: normal;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+}
+.thumb_common h3 a
+{
+	color: #feda25;
+	text-decoration: none;
+}
+.thumb_common h3 a:hover
+{
+	color: #000000;
+	text-decoration: none;
+}
+.thumbnail_part1
+{
+	float: left;
+	width: 258px;
+	padding-right: 36px;
+	padding-left: 36px;
+}
+.thumbnail_part2
+{
+	float: left;
+	width: 258px;
+	padding-right: 41px;
+	padding-left: 40px;
+}
+.thumbnail_part3
+{
+	float: left;
+	width: 258px;
+	padding-right: 36px;
+	padding-left: 35px;
+}
+.facebook
+{
+	float: left;
+	width: 963px;
+	padding-bottom: 10px;
+	padding-left: 35px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #555555;
+}
+.call_now
+{
+	float: left;
+	width: 998px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dashed;
+	border-bottom-style: dashed;
+	border-top-color: #555555;
+	border-bottom-color: #555555;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 26px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-bottom: 25px;
+}
+.number
+{
+	font-size: 18px;
+	font-weight: normal;
+}
+.footer
+{
+	float: left;
+	width: 978px;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	font-size: 12px;
+}
+.footer h4
+{
+	font-size: 13px;
+	color: #000;
+	margin: 0px;
+	font-weight: bold;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 2px;
+	padding-left: 0px;
+}
+.f_logo
+{
+	float: left;
+	width: 182px;
+}
+.footer ul
+{
+	display: block;
+	margin: 0px;
+	float: left;
+	list-style-type: none;
+	padding: 0px;
+}
+.footer ul li
+{
+	display: block;
+	margin: 0px;
+	float: left;
+	width: 155px;
+	list-style-type: none;
+	padding: 0px;
+}
+.footer ul li a
+{
+	text-decoration: none;
+	color: #000;
+}
+.footer ul li a:hover
+{
+	color: #f5c402;
+	text-decoration: none;
+}
+.footer ul li ul
+{
+	display: block;
+	margin: 0px;
+	float: left;
+	width: 155px;
+	list-style-type: none;
+	padding: 0px;
+}
+.address
+{
+	float: left;
+	width: 322px;
+}
+p
+{
+	margin: 0px;
+	padding: 0px;
+}
+img
+{
+	margin: 0px;
+	padding: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+form
+{
+	margin: auto;
+}
+.textmiddle {
+	vertical-align:middle;
+	margin-right: 5px;
+	margin-left: 15px;
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+} 
+.tab_title {
+    color: #FFFFFF;
+    float: left;
+    font-family: 'Droid Serif', serif;
+    font-size: 16px;
+    height: 45px;
+    line-height: 18px;
+    margin-right: 32px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    text-align: center;
+    width: 192px;
+}
+.tab_title2 {
+    color: #FFFFFF;
+    float: left;
+    font-family: 'Droid Serif', serif;
+    font-size: 16px;
+    height: 45px;
+    line-height: 18px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    text-align: center;
+    width: 192px;
+}
+.tab_title a {
+	color: #fff;
+	text-decoration: none;
+}
+.learn_more {
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-family: 'Droid Serif', serif;
+    font-size: 14px;
+    height: 58px;
+    line-height: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 979px;
+}
+.learn_more li {
+    display: inline;
+    float: left;
+    height: 58px;
+    list-style-type: none;
+    margin: 0 32px 0 0;
+    margin-right: 32px;
+	padding-left: 0px;
+    text-align: center;
+    width: 192px;
+}
+.learn_more li.active {
+	visibility:hidden;
+}
+.learn_more li a {
+    background-image: url(/wp-content/themes/yoga/images/more.gif);
+    background-position: left top;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    float: left;
+    height: 38px;
+    text-decoration: none;
+    width: 192px;
+}
+.learn_more li a:hover
+{
+	color: #FFF;
+	text-decoration: none;
+}
+.learn_more li a.active
+{
+	color: #E6E5E5;
+	background-color: #E6E5E5;
+	background-image: none;
+	display: none;
+}
+.tab_bar {
+    background-color: #fdd53c;
+    background-image: url(/wp-content/themes/yoga/images/select0.gif);
+    background-position: left top;
+    background-repeat: no-repeat;
+    color: #000;
+    float: left;
+    font-family: 'Droid Serif', serif;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    padding-top: 30px;
+    width: 850px;
+}
+.tab_bar.select1 {
+    background-image: url(/wp-content/themes/yoga/images/select1.gif);
+}
+.tab_bar.select2 {
+    background-image: url(/wp-content/themes/yoga/images/select2.gif);
+}
+.tab_bar.select3 {
+    background-image: url(/wp-content/themes/yoga/images/select3.gif);
+}
+.tab_bar.select4 {
+    background-image: url(/wp-content/themes/yoga/images/select4.gif);
+}
+.tab_box
+{
+	background-image: url(/wp-content/themes/yoga/images/box_back.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	float: left;
+	width: 979px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.chart_left
+{
+	float: left;
+	width: 250px;
+	position: relative;
+	line-height: 22px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #555555;
+}
+.chart
+{
+	float: left;
+	width: 584px;
+	padding-left: 22px;
+}
+.chart .header {
+	float: none;
+	padding-bottom: 0;
+	width: auto;
+}
+.chart_left h2
+{
+	font-size: 18px;
+	color: #000;
+	margin: 0px;
+	padding-top: 25px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 0;
+	font-weight: normal;
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #555555;
+	text-transform: uppercase;
+	line-height: 22px;
+}
+.chart_left p
+{
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 30px;
+	padding-left: 0px;
+}
+.sub_nav
+{
+	display: inline;
+	margin: 0 0 20px 0;
+	float: left;
+	height: 47px;
+	width: 998px;
+	list-style-type: none;
+	font-family: 'Droid Serif',serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 0;
+}
+.sub_nav li
+{
+	display: inline;
+	margin: 0 32px 0 0;
+	float: left;
+	width: 172px;
+	height: 40px;
+	text-align: center;
+	padding: 7px 10px 0 10px;
+	list-style-type: none;
+	background-color: #434141;
+}
+
+.sub_nav li a
+{
+	color: #fff;
+	text-decoration: none;
+	background-image: url(/wp-content/themes/yoga/images/sub_nav111.gif);
+	background-repeat: no-repeat;
+	background-position: -264px top;
+}
+.sub_nav li.active
+{
+	background-color: #fdd53c;
+	background-position: -18px top;
+}
+.sub_nav li.active a
+{
+	color: #000;
+}
+/*drop down menu*/
+.smartmenu{
+	width: 100%;
+	z-index: 20;
+
+}
+
+.smartmenu ul{
+z-index:100;
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.smartmenu ul li{
+	position: relative;
+	display: inline;
+	float: left;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 30px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+/*Top level menu link items style*/
+.smartmenu ul li a{
+	color: #000;
+	text-decoration: none;
+	display: block;
+	cursor: hand;
+	font-size: 18px;
+	text-transform: uppercase;
+	height: 23px;
+	padding-top: 5px;
+	font-weight: 200;
+}
+.smartmenu ul li a.active
+{
+	color: #000;
+	font-weight: bold;
+}
+* html .smartmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+	display: inline-block;
+}
+
+
+
+.smartmenu ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+	color: #000;
+}
+
+.smartmenu ul li a:hover{
+	color: #feda25;
+}
+	
+/* Holly Hack for IE \*/
+* html .smartmenu{height: 1%;} /*Holly Hack for IE7 and below*/

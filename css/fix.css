@@ -1,0 +1,523 @@
+.container{
+	max-width: 998px !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+.clear{
+	content: "";
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+.header{
+	margin-top: 10px;
+}
+.top-slider{
+	/* overflow: hidden; */
+	margin-bottom: 30px;
+	padding: 0;
+	/* max-width:751px; */
+	display: inline;
+	float: left;
+	width:79%;
+	max-width: 751px;
+	/* max-height: 325px; */
+	overflow: hidden;
+}
+
+.top-slider img{
+	width: 100% !important;
+	height: auto;
+}
+.top-slider .nivoSlider{
+	/* max-height: 318px; */
+}
+.top-banner{
+	margin-bottom: 30px;
+	padding: 0;
+	/* width: 199px; */
+	width:21%;
+	max-width: 199px;
+	/* max-height: 325px; */
+	display: inline;
+	float: left;
+	text-align: center;
+	
+}
+.top-banner img{
+	width: 100%;
+	height: auto;
+}
+.top-slider:after,.top-banner:after{
+	content:"";
+	clear: both;
+	display: block;
+}
+
+
+.logo img{
+	width: 100%;
+	height: auto;
+}
+.thumb_common:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.thumb_common h2{
+	color: #000000;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+.thumb_common .thumb-child:last-child{
+	border-left: 1px dashed #555555;
+	border-right: 1px dashed #555555;
+}
+.thumb_common .thumb-child img{
+	width: 100%;
+	height: auto;
+}
+.thumb_common .thumb-child{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-left: 1px dashed #555555;
+	min-height: 350px;
+}
+.top_nav{
+	float: left;
+	display: inline;
+	padding-top: 16px;
+	text-align: right;
+	height: 94px;
+}
+.icon{
+	float: right;
+	display: inline;
+}
+.main_nav{
+	width:100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.navbar-default{
+	background: none;
+	border:none;
+	box-shadow: none;
+}
+.navbar-default .navbar-nav > li > a{
+	color:#000;
+	padding: 0;
+}
+.nav > li > a{
+	padding: 0;
+}
+#bs-example-navbar-collapse-1{
+	text-align: center;
+}
+#bs-example-navbar-collapse-1 .navbar-nav{
+	display: inline-block;
+	float: none;
+}
+.slider .nivoSlider{
+	width: inherit !important;
+	height: inherit !important;
+}
+.slider .nivoSlider img{
+	width: 100% !important;
+	height: auto; 
+}
+#menu-footer-menu li{
+	/* margin-bottom: 10px; */
+}
+.inner_content table{
+	width: 100%;
+}
+
+.fullwidth{
+	width:100% !important;
+	height: auto !important;
+}
+.mybox{
+	background: url(../images/upcoming_01.jpg) no-repeat top center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	min-width: 220px;
+	min-height: 190px;
+	position: relative;
+	overflow: auto;
+}
+.mybox > div{
+	width: 100%;
+	position: relative;
+}
+.mybox a{
+	color: white !important;
+	width: 100%;
+	text-align: center;
+	display: block;
+	font-family: 'Droid Serif', serif;
+	font-size: 16px;
+}
+.mybox .title{
+	width: 100%;
+	margin-top: 30px;
+	min-height: 50px;
+	
+}
+.mybox .learnmore{
+	width: 100%;
+	
+	border-top:1px dashed white;
+	border-bottom:1px dashed white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.top-curr{
+	width: 100%;
+	margin-top: 20px;
+	/* margin-bottom: 50px; */
+	
+}
+.top-curr:after{
+	content: "";
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+.footer-menu:after{
+	content: "";
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+
+.footer .menu > li{
+	width: 33.33% !important;
+	margin-bottom: 10px;
+}
+.footer .menu > li .sub-menu ul li{
+	margin: 0;
+}
+/***************** media query **************/
+
+/************ LG Optimus One ***************/
+@media only screen 
+and (min-device-width : 213px) 
+and (max-device-width : 320px){
+	.tab_box,.mybox{
+		background-image: none;
+	}
+	.top-slider img{
+		position: relative;
+		width: 100%;
+		height: auto !important;
+	}
+	.navbar-nav li{
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.mybox{
+		min-width: 160px;
+		margin-left: auto;
+		margin-right: auto;
+		background: none;
+	}
+	.mybox a{
+		font-size: 15px;
+	}
+	.mybox .title{
+		margin-top: 0;
+		min-height: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px dashed #555555;
+	}
+	.thumb_common .thumb-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.thumb_common .thumb-child:last-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	#menu-footer-menu li{
+		margin-bottom: 0;
+		width: 100% !important;
+	}
+	.footer .menu > li .sub-menu ul li{
+		margin: 0;
+		width: 100% !important;
+	}
+	.footer ul li ul{
+		width: 100% !important;
+	}
+	.navbar-default .navbar-nav > li > a{
+		font-weight: bold;
+	}
+	
+}
+/*** iPhone 2G-4s Protrait*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.tab_box,.mybox{
+		background-image: none;
+	}
+	.top-slider img{
+		position: relative;
+		width: 100%;
+		height: auto !important;
+	}
+	.navbar-nav li{
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.top-slider{
+		width: auto;
+		height: auto;
+	}
+	.top-banner{
+		width: 100% !important;
+		max-width: 480px !important;
+		text-align: center;
+	}
+	.top-banner img{
+		width: 100% !important;
+		height: auto;
+	}
+	.thumb_common .thumb-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.thumb_common .thumb-child:last-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	div.healcode table.schedule tr td{
+		font-size: 10px;
+	}
+	.mybox{
+		background: none;
+		min-height: 0 !important;
+	}
+	.mybox .title{
+		margin-top: 0;
+		min-height: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		/* border-bottom: 1px dashed #555555; */
+	}
+	.mybox a{
+		color: black !important;
+	}
+	.mybox .learnmore{
+		display: none;
+	}
+	.top-curr{
+		margin-bottom: 0;
+	}
+	.thumb_common .thumb-child{
+		min-height: 200px;
+	}
+	#menu-footer-menu li{
+		margin-bottom: 0;
+		width: 100% !important;
+	}
+	.footer .menu > li .sub-menu ul li{
+		margin: 0;
+		width: 100% !important;
+	}
+	.footer ul li ul{
+		width: 100% !important;
+	}
+	.navbar-default .navbar-nav > li > a{
+		font-weight: bold;
+	}
+}
+
+/********** HTC **************/
+@media only screen 
+and (min-device-width : 360px) 
+and (max-device-width : 640px){
+	.tab_box,.mybox{
+		background-image: none;
+	}
+	.top-slider img{
+		position: relative;
+		width: 100%;
+		height: auto !important;
+	}
+	.thumb_common .thumb-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+		min-height: 200px;
+	}
+	.thumb_common .thumb-child:last-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.mybox{
+		background: none;
+		min-height: 0 !important;
+	}
+	.mybox .title{
+		margin-top: 0;
+		min-height: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px dashed #555555;
+	}
+	.mybox a{
+		color: black !important;
+	}
+	.mybox .learnmore{
+		display: none;
+	}
+	#menu-footer-menu li{
+		margin-bottom: 0;
+		width: 100% !important;
+	}
+	.footer .menu > li .sub-menu ul li{
+		margin: 0;
+		width: 100% !important;
+	}
+	.footer ul li ul{
+		width: 100% !important;
+	}
+	.navbar-default .navbar-nav > li > a{
+		font-weight: bold;
+	}
+	.navbar-nav li{
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+/****** Samsung Galaxy Tab *******/
+@media only screen
+and (min-device-width : 600px) 
+and (max-device-width : 1024px)
+and (orientation : portrait){
+	.tab_box,.mybox{
+		background-image: none;
+	}
+	.top-slider img{
+		position: relative;
+		width: 100%;
+		height: auto !important;
+	}
+	.navbar-nav li{
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.top-slider iframe{
+		height: 195px !important;
+	}
+	.top-slider .nivoSlider{
+		max-height: 195px !important;
+	}
+	.trainer_list > li{
+		padding-right: 5px;
+	}
+	.thumb_common .thumb-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.thumb_common .thumb-child:last-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.navbar-default .navbar-nav > li > a{
+		font-weight: bold;
+	}
+}
+
+
+/* ipad 1&2 Protrait*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) 
+and (-webkit-min-device-pixel-ratio: 1) {
+	.tab_box,.mybox{
+		background-image: none;
+	}
+	.top-slider img{
+		position: relative;
+		width: 100%;
+		height: auto !important;
+	}
+	.smartmenu ul li a{
+		font-size: 15px;
+	}
+	.mybox{
+		min-width: 180px;
+	}
+	.thumb_common .thumb-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.thumb_common .thumb-child:last-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.navbar-default .navbar-nav > li > a{
+		font-weight: bold;
+	}
+	.navbar-nav li{
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+
+
+/* Nexus 7 */
+@media only screen 
+and (min-device-width : 604px) 
+and (max-device-width : 966px){
+	
+	.tab_box,.mybox{
+		background-image: none;
+	}
+	.top-slider img{
+		position: relative;
+		width: 100%;
+		height: auto !important;
+	}
+	.smartmenu ul li a{
+		font-size: 15px;
+	}
+	.mybox{
+		min-width: 180px;
+	}
+	.thumb_common .thumb-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.thumb_common .thumb-child:last-child{
+		border-left: 1px dashed #555555;
+		border-right: 1px dashed #555555;
+	}
+	.navbar-default .navbar-nav > li > a{
+		font-weight: bold;
+	}
+	.navbar-nav li{
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
