@@ -8,9 +8,23 @@ function yoga_register_custom_menus() {
 			'class-schedule-menu' => __( 'Class Schedule Menu' )
 		)
 	);
+	
+	add_action( 'init', 'yoga_register_custom_menus' );
+	
 }
 
-add_action( 'init', 'yoga_register_custom_menus' );
+
+
+// Add custom menus to Dashboard > menus when theme is active, if you have menus registered   
+if ( function_exists( 'yoga_register_custom_menus' ) ) {
+	register_nav_menus(
+		array(
+		  'main-menu' => 'Main Menu',
+		  'footer-menu' => 'Footer Menu',
+		  'class-schedule-menu' => 'Class Schedule Menu'
+			 )
+	);
+}
 
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
