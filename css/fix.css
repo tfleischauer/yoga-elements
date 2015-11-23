@@ -102,7 +102,7 @@
 .main_nav{
 	width:100%;
 	padding-top: 5px;
-	padding-bottom: 5px;
+	/*padding-bottom: 5px;*/
 }
 .navbar-default{
 	background: none;
