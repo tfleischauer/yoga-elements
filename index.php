@@ -1,59 +1,57 @@
-<?php
-    get_header();
-?>
-<!--index.php -->
+<?php get_header(); ?>
 
-<div class="home_content">
-  <h1>Welcome to Yoga Elements Studio Bangkok!</h1>
-  <p> We offer you high quality teaching of vinyasa flow practice based around Ashtanga Vinyasa, yet we welcome, 
-    and are inspired by many systems of yoga. Located conveniently behind Central Chidlom in downtown Bangkok, 
-    you will enjoy inspiring, and professional classes in a beautiful environment welcoming community.</p>
-  <h2>Upcoming Events</h2>
-</div>
-<div class="thumb_common">
-  <div class="thumbnail_part1">
-    <p><a href="#"><img src="<?php echo get_bloginfo('template_directory');?>/images/thumbnail1.jpg" alt="&quot; &quot;" width="258" height="207" /></a></p>
-    <h3><a href="#">Functional Anatomy <br />
-      and Movement</a></h3>
-    <p> for Yoga asana with Shane</p>
-    <p> Weekend: 27 Oct-11 Nov 2012</p>
-  </div>
-  <div class="thumbnail_part2">
-    <p><a href="#"><img src="<?php echo get_bloginfo('template_directory');?>/images/thumbnail2.jpg" alt="&quot; &quot;" width="258" height="207" /></a></p>
-    <h3><a href="#">Art of Teaching with <br />
-      Adrian Cox</a></h3>
-    <p> Weekday: 16 Oct - 5 Nov 2012</p>
-    <p>Weekend: 17 Nov - 15 Dec 2012</p>
-  </div>
-  <div class="thumbnail_part3">
-    <p><a href="#"><img src="<?php echo get_bloginfo('template_directory');?>/images/thumbnail3.jpg" alt="&quot; &quot;" width="258" height="207" /></a></p>
-    <h3><a href="#">Introducing to Ashtanga <br />
-      Primary Series</a></h3>
-    <p> with Tonia, Every Fridays</p>
-  </div>
-</div>
-<div class="thumb_common">
-  <div class="thumbnail_part1">
-    <p><a href="#"><img src="<?php echo get_bloginfo('template_directory');?>/images/thumbnail4.jpg" alt="&quot; &quot;" width="258" height="207" /></a></p>
-    <h3><a href="#">Functional Anatomy <br />
-      and Movement</a></h3>
-    <p> for Yoga asana with Shane</p>
-    <p> Weekend: 27 Oct-11 Nov 2012</p>
-  </div>
-  <div class="thumbnail_part2">
-    <p><a href="#"><img src="<?php echo get_bloginfo('template_directory');?>/images/thumbnail5.jpg" alt="&quot; &quot;" width="258" height="207" /></a></p>
-    <h3><a href="#">Art of Teaching with <br />
-      Adrian Cox</a></h3>
-    <p> Weekday: 16 Oct - 5 Nov 2012</p>
-    <p>Weekend: 17 Nov - 15 Dec 2012</p>
-  </div>
-  <div class="thumbnail_part3">
-    <p><a href="#"><img src="<?php echo get_bloginfo('template_directory');?>/images/thumbnail6.jpg" alt="&quot; &quot;" width="258" height="207" /></a></p>
-    <h3><a href="#">Introducing to Ashtanga <br />
-      Primary Series</a></h3>
-    <p> with Tonia, Every Fridays</p>
-  </div>
-</div>
-<?php
-    get_footer();
-?>
+<!-- START CONTENT -->
+<h2 id="page-title"><?php wp_title(''); ?></h2>
+
+<div class="content">
+
+<?php if (have_posts()) : ?>
+
+<!--<div class="index">-->
+
+<?php while (have_posts()) : the_post(); // start the loop ?> 
+
+<article>
+	<div class="inner_content post-box clear-fix">
+
+	<!--<div class="blog-post white-bg box-shadow">-->
+
+        <h2>
+        	<a href="<?php the_permalink(); // link to the page or posting ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+            	<?php the_title(); // get the page title or posting title ?>&nbsp;&raquo;
+            </a>
+        </h2>
+          
+            <p class="postmetadata">
+                <span class="date">Posted on <?php the_time('F jS, Y') ?></span> in 
+                <span class="cat"><?php the_category(', ') ?></span>
+                <span class="author"><?php _e('By');?> <?php the_author_posts_link(); ?></span>
+                <?php /*?><span class="comments">with <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></span><?php */?>
+            </p>
+            <?php /* the_content('More &raquo;'); // get the page or posting written content */ ?>
+            <a href="<?php the_permalink(); // link to the page or posting ?>">
+				<?php the_post_thumbnail( 'thumbnail' ); ?>
+            </a>
+            <?php the_excerpt(); // get the posting's excerpt ?>
+            <p class="read-more"><a href="<?php the_permalink(); // link to the page or posting ?>">Read More</a></p>
+            <?php edit_post_link('Edit this entry.', '<p><small>', '</small></p>'); ?>
+            
+    </div> <!-- .post-box -->
+        
+	<!--</div>--> <!-- end .blog-post -->
+    
+    <!--</div>--> <!-- post-box -->
+    
+   <!-- <hr>-->
+
+</article>
+
+<?php endwhile; endif; // end the loop ?>
+
+<?php get_sidebar('primary'); ?>
+
+<!--</div>--> <!-- end .inner_content -->
+<!--</div>--> <!-- end .index -->
+</div> <!-- END .content -->
+
+<?php get_footer(); ?>

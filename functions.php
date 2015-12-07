@@ -35,6 +35,67 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'upcoming-events-thumb', 258, 207 );
 }
 
+// create thumbnails for excerpts using the featured image
+if ( function_exists( 'add_theme_support' ) ) { 
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 140, 140, true );
+}
+
+/* Adding Theme Support - Post Thumbnails */
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails', array( 'post' ) );  // Posts only
+
+/* Add Custom Size Images */
+add_image_size('blog-140px-width', 140); /* 140 px width and unlimited height */
+add_image_size('blog-140xauto', 140, auto); /* 140 px width and auto height */
+add_image_size('home-140x140px-cropped', 140, 140, true); /* crops image to 140 x 140 px */
+/* End Adding Theme Support - Post Thumbnails */
+
+/* Register Sidebars */
+add_action( 'widgets_init', 'my_register_sidebars' );
+
+function my_register_sidebars() {
+	/* Register the primary sidebar. */
+	register_sidebar(
+		array(
+			'id' => 'primary',
+			'name' => __( 'Primary Sidebar' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+}
+/* End Register Sidebars */
+
+// Remove Inline Styles from Captions
+add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
+add_shortcode('caption', 'fixed_img_caption_shortcode');
+function fixed_img_caption_shortcode($attr, $content = null) {
+	
+	if ( ! isset( $attr['caption'] ) ) {
+		if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
+			$content = $matches[1];
+			$attr['caption'] = trim( $matches[2] );
+		}
+	}
+	$output = apply_filters('img_caption_shortcode', '', $attr, $content);
+	if ( $output != '' )
+		return $output;
+	extract(shortcode_atts(array(
+		'id'	=> '',
+		'align'	=> 'alignnone',
+		'width'	=> '',
+		'caption' => ''
+	), $attr));
+	if ( 1 > (int) $width || empty($caption) )
+		return $content;
+	if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" >'
+	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+}
+
 /*
 SPECIAL MENU FOR HIGHER TRAINING SECTION
 */
