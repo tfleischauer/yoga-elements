@@ -37,7 +37,7 @@ body {
 	/*background: url('../images/bg-980px-grid.png') center repeat-y;*/
 }
 
-div {
+/*div {
 	outline: 1px solid red;
 } 
 
@@ -47,43 +47,9 @@ article {
 
 .post-box {
 	outline: 1px solid green;
-}
+}*/
 
 /*** End Development Only ***/
-
-/*** Dynamic Sidebar ***/
-
-aside > div {
-	border-bottom: 1px dashed #555;  /* puts dash under each sidebar widget */
-	padding-bottom: 20px; /* puts space within each sidebar widget */
-}
-
-h3.widget-title {
-	margin-top: 0;
-	padding-top: 0;	
-}
-
-.widget {
-	margin-bottom: 20px;	/* puts space after each sidebar widget */
-}
-
-aside .widget::after {
-	/*content: "";
-	background: #A3A29E none repeat scroll 0% 0%;
-	position: absolute;
-	height: 1px;
-	bottom: 0px;
-	left: 20px;
-	right: 20px;*/
-}
-
-aside > div:last-child {
-	border-bottom: none;
-}
-
-input#s {
-	width: calc(140/220 * 100%);	
-}
 
 /*** Primary Sidebar ***/
 #sidebar-primary {
@@ -105,49 +71,52 @@ input#s {
 	padding-left: calc(10/220 * 100%);
 }
 
-/*** GIDDY THRONG PRIMARY SIDEBAR ***/
-/*#primary-sidebar {
-	width:23.40425532%; */ /* 220/940 = 23.40425532%*/
-/*	float:right;
-	padding-left:0;	
+aside > div {
+	border-bottom: 1px dashed #555;  /* puts dash under each sidebar widget */
+	padding-bottom: 20px; /* puts space within each sidebar widget at the bottom */
 }
 
-#primary-sidebar > div {
-	padding: 3%;
-	background-color: rgba(255,255,255,0.8);
+aside > div:last-child {
+	border-bottom: none;
 }
 
 .widget {
-	margin-bottom: 25px;*/	
-/*}
+	margin-bottom: 20px; /* puts space after each sidebar widget */
+}
 
-#aside-categories ul {*/
-	/*padding-left: 3.125%;*/ /* 5 / 160 px */
-/*}*/
-/*** END GIDDY THRONG PRIMARY SIDEBAR ***/
+h3.widget-title {
+	margin-top: 0;
+	padding-top: 0;	
+}
 
-/*** End Dynamic Sidebar ***/
+aside .widget::after {
+	/*content: "";
+	background: #A3A29E none repeat scroll 0% 0%;
+	position: absolute;
+	height: 1px;
+	bottom: 0px;
+	left: 20px;
+	right: 20px;*/
+}
+
+input#s {
+	width: calc(140/220 * 100%);	
+}
+
+/*** END Primary Sidebar ***/
+
 
 /*** Blog Section ***/
 
-/* the article tags and sidebar is in a .content div */
+/* the article tags are in a .content div */
 /* each blog post is in an article */ 
 /* in each article there is .inner_content */
 article {
-	/*margin-right: 0;*/
-	width: calc(690/940 * 100%); /* only affect the first article / blog post */
-	/*margin: 0;*/
-	/*clear: both;*/
-	/*margin-bottom: 40px;
-	overflow: hidden;*/
-	display: inline-block;
 	border-bottom: 1px dashed #555555;
-	/*margin-right: 20px;*/
 }
 
 article p {
   margin-bottom:.6em;
-  /*float: right;*/
   text-align: left;
 }
 
@@ -155,17 +124,15 @@ article p {
 	padding-bottom: 0;	/* removes the 40px border from style.css line 137 */
 }
 
-.inner_content .post-box .clear-fix {}
-
+/* .inner_content .post-box are in the same div, 
+the first one after article */
 .post-box {
   margin: 15px 0 0 0;
 }
 
 .post-box img {
   float: left;
-  /*width:220px;*/
-  /*margin-left:20px;*/
-  margin-bottom:7px;
+  margin-bottom: 7px;
 }
 
 .post-box a:link img,
@@ -177,25 +144,13 @@ article p {
   outline: 1px solid #898A8E;
 }
 
-.post-box .wp-caption {
-  /*margin-left:10px;*/
-}
+.post-box .wp-caption {}
 
-.post-box p {
-    /*max-width: 540px;*/
-	/*max-width: 100%;*/
-    /*float: right;*/
-	/*clear: both;*/
-}
+.post-box p {}
 
-.post-box h2 {
-	/*float: left;*/	
-}
-  
-/*.post-box .wp-caption {
-  margin-left:0px;
-  display:block;
-}*/
+.post-box h2 {}
+
+.postmetadata {}
   
 p.postmetadata {
   font-weight: 600;
@@ -215,10 +170,6 @@ p.postmetadata {
   color: #000;
 }
 
-.postmetadata {
-  /*margin-bottom:15px;*/
-}
-
 .wp-caption,
 .size-full {
   float:right;
@@ -229,7 +180,7 @@ p.postmetadata {
 }
 
 img.size-full {
-	max-width:180px;
+	max-width: 180px;
 }
 
 caption {
@@ -255,6 +206,11 @@ p.wp-caption-text {
 	padding-bottom: .375em;
 }
 
+.content {
+	width: calc(690/940 * 100%);
+	float: left;	
+}
+
 .content h2 {
 	font-size: 2em;
 	margin-bottom: .325em;	
@@ -268,6 +224,10 @@ p.wp-caption-text {
 
 article.post-box p {
 	display: inline;	
+}
+
+label.screen-reader-text {
+	display: none;	
 }
 
 .content article.post-excerpt {
@@ -297,9 +257,7 @@ article.post-box p {
 
 /* ----- End Post Thumbnails ----- */
 
-label.screen-reader-text {
-	display: none;	
-}
+/*** END Blog Section ***/
 
 @media (max-width: 768px) {
 	.logo img {
@@ -322,7 +280,7 @@ label.screen-reader-text {
 		padding-left: 0;
 	}
 	
-	article {
+	.content {
 		width: 100%;
 		float: none;
 	}
