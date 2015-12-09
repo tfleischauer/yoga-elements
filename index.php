@@ -50,6 +50,8 @@
 
 <?php get_sidebar('primary'); ?>
 
+<div class="delimiter"></div>
+
 <!--</div>--> <!-- end .inner_content -->
 <!--</div>--> <!-- end .index -->
 </div> <!-- END .content -->
