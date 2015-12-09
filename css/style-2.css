@@ -8,8 +8,7 @@ img {
 }
 
 hr {
-	border: 1px dashed red;
-	
+	/*border: 1px dashed red;*/
 	/*border-top-width: 1px;
 	border-bottom-width: 1px;
 	border-top-style: dashed;
@@ -18,11 +17,15 @@ hr {
 	border-bottom-color: #555555*/;	
 }
 
-clear-fix::after {
+/*.clear-fix::after {
   content: " ";
   height: 0;
   width: 0;
   display: block;
+  clear: both;
+}*/
+
+.delimiter {
   clear: both;
 }
 
@@ -51,9 +54,17 @@ article {
 /*** Dynamic Sidebar ***/
 
 aside > div {
-	border-bottom: 1px dashed #555;
-	/*border-bottom-left-radius: 30px;*/
-	padding-bottom: 20px;
+	border-bottom: 1px dashed #555;  /* puts dash under each sidebar widget */
+	padding-bottom: 20px; /* puts space within each sidebar widget */
+}
+
+h3.widget-title {
+	margin-top: 0;
+	padding-top: 0;	
+}
+
+.widget {
+	margin-bottom: 20px;	/* puts space after each sidebar widget */
 }
 
 aside .widget::after {
@@ -74,24 +85,7 @@ input#s {
 	width: calc(140/220 * 100%);	
 }
 
-.content .inner_content {
-	padding-bottom: 0;	
-}
-
-article {
-	margin-right: 0;
-	width: calc(690/940 * 100%);
-	/*margin: 0;*/
-	/*clear: both;*/
-	/*margin-bottom: 40px;
-	overflow: hidden;*/
-	display: inline-block;
-	border-bottom: 1px dashed #555555;
-	/*margin-right: 20px;*/
-}
-
-.inner_content .post-box .clear-fix {}
-
+/*** Primary Sidebar ***/
 #sidebar-primary {
 	width: calc(220/940 * 100%);
 	float: right;
@@ -108,31 +102,60 @@ article {
 
 #sidebar-primary div,
 #sidebar-primary h3 {
-	/*padding-left: 20px;*/	
 	padding-left: calc(10/220 * 100%);
 }
 
-#primary div {
-	/*border-bottom: 1px solid #A3A29E;*/
-	/*padding-left: 20px;	*/	
+/*** GIDDY THRONG PRIMARY SIDEBAR ***/
+/*#primary-sidebar {
+	width:23.40425532%; */ /* 220/940 = 23.40425532%*/
+/*	float:right;
+	padding-left:0;	
 }
 
-#sidebar {
-	width: 220px;
-	float: right;	
-	display: inline-block;
-	clear: none;
+#primary-sidebar > div {
+	padding: 3%;
+	background-color: rgba(255,255,255,0.8);
 }
+
+.widget {
+	margin-bottom: 25px;*/	
+/*}
+
+#aside-categories ul {*/
+	/*padding-left: 3.125%;*/ /* 5 / 160 px */
+/*}*/
+/*** END GIDDY THRONG PRIMARY SIDEBAR ***/
 
 /*** End Dynamic Sidebar ***/
 
 /*** Blog Section ***/
+
+/* the article tags and sidebar is in a .content div */
+/* each blog post is in an article */ 
+/* in each article there is .inner_content */
+article {
+	/*margin-right: 0;*/
+	width: calc(690/940 * 100%); /* only affect the first article / blog post */
+	/*margin: 0;*/
+	/*clear: both;*/
+	/*margin-bottom: 40px;
+	overflow: hidden;*/
+	display: inline-block;
+	border-bottom: 1px dashed #555555;
+	/*margin-right: 20px;*/
+}
 
 article p {
   margin-bottom:.6em;
   /*float: right;*/
   text-align: left;
 }
+
+.content .inner_content {
+	padding-bottom: 0;	/* removes the 40px border from style.css line 137 */
+}
+
+.inner_content .post-box .clear-fix {}
 
 .post-box {
   margin: 15px 0 0 0;
@@ -274,16 +297,6 @@ article.post-box p {
 
 /* ----- End Post Thumbnails ----- */
 
-h3.widget-title {
-	margin-top: 0;
-	padding-top: 0;	
-	
-}
-
-.widget {
-	margin-bottom: 20px;	
-}
-
 label.screen-reader-text {
 	display: none;	
 }
@@ -319,5 +332,3 @@ label.screen-reader-text {
 		border-left: none;	
 	}
 }
-
-
