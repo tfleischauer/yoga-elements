@@ -48,12 +48,14 @@
 
 <?php endwhile; endif; // end the loop ?>
 
-<?php get_sidebar('primary'); ?>
+
 
 <div class="delimiter"></div>
 
 <!--</div>--> <!-- end .inner_content -->
 <!--</div>--> <!-- end .index -->
 </div> <!-- END .content -->
+
+<?php get_sidebar('primary'); ?>
 
 <?php get_footer(); ?>
