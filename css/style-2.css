@@ -47,9 +47,39 @@ article {
 
 .post-box {
 	outline: 1px solid green;
+}
+
+.content {
+	outline: 1px solid purple;
+}
+
+.row {
+	outline: 1px solid orange;
 }*/
 
 /*** End Development Only ***/
+
+/*** overrides style.css ***/
+
+.wrapper {
+	margin-right: none;
+	margin-left: none;	
+	position: static;
+}
+
+/*Top level menu link items style*/
+.smartmenu ul li a {
+	height: initial; /* A CSS value that will apply a property's initial value as defined in the CSS specification that defines the property */
+	/*padding-top: 0;*/
+	line-height: 17px;	
+}
+
+.smartmenu ul li.current-menu-item a {
+	color: #FFC80B;	
+	text-shadow: 1px 1px #444;
+}
+/*** End overrides style.css ***/
+
 
 /*** Primary Sidebar ***/
 #sidebar-primary {
@@ -72,7 +102,7 @@ article {
 }
 
 aside > div {
-	border-bottom: 1px dashed #555;  /* puts dash under each sidebar widget */
+	/*border-bottom: 1px dashed #555;*/  /* puts dash under each sidebar widget */
 	padding-bottom: 20px; /* puts space within each sidebar widget at the bottom */
 }
 
@@ -103,6 +133,12 @@ input#s {
 	width: calc(140/220 * 100%);	
 }
 
+.widget a:link,
+.widget a:visited {
+	color: #545353;
+	/*border-bottom: 1px dashed #555;*/
+}
+
 /*** END Primary Sidebar ***/
 
 
@@ -115,9 +151,17 @@ article {
 	border-bottom: 1px dashed #555555;
 }
 
+article:last-of-type {
+	border-bottom: none;
+}
+
 article p {
   margin-bottom:.6em;
   text-align: left;
+}
+
+article img {
+	margin-bottom: 20px;	
 }
 
 .content .inner_content {
@@ -144,7 +188,9 @@ the first one after article */
   outline: 1px solid #898A8E;
 }
 
-.post-box .wp-caption {}
+.post-box .wp-caption {
+	
+}
 
 .post-box p {}
 
@@ -170,36 +216,9 @@ p.postmetadata {
   color: #000;
 }
 
-.wp-caption,
-.size-full {
-  float:right;
-  max-width:180px;
-  /*margin-left: calc(100% * (20/940));*/
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
 img.size-full {
-	max-width: 180px;
-}
-
-caption {
-  /*width:100%;*/
-}
-
-.post-box .wp-caption {
-  /*margin-left:10px;*/
-}
-
-p.wp-caption-text {
-  text-align: left;
-  float: none;
-}
-
-.wp-caption-text {
-  font-family:"PT Sans Caption";
-  padding-bottom:.45em;
-  font-weight: 600; 
+	/*max-width: 180px;*/
+	padding-bottom: 0;
 }
 
 .post-excerpt .inner_content p {
@@ -207,13 +226,57 @@ p.wp-caption-text {
 }
 
 .content {
-	width: calc(690/940 * 100%);
+	width: calc(700/940 * 100%);
 	float: left;	
 }
 
 .content h2 {
-	font-size: 2em;
+	/*font-size: 2em;
 	margin-bottom: .325em;	
+	color: red;*/
+	
+	/*font-size: 30px;
+	margin-top: 20px;
+  	margin-bottom: 10px;*/
+}
+
+.single h2#page-title
+{
+	font-size: 30px;
+	margin-top: 20px;
+  	margin-bottom: 25px;
+	
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;	
+}
+
+/*.single h2#page-title > p {
+	margin-bottom: 125px;
+}*/
+
+/* show next or previous post */
+nav.post-nav {
+  clear:both;
+  margin-bottom: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+nav.post-nav a:link,
+nav.post-nav a:visited {
+	color: #444444;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 10px 10px 0px ; 	
+}
+	
+.alignright {
+  float: right;
+  margin: 0 0px 10px 10px; 
 }
 
 .content article.post-box p, 
@@ -236,14 +299,60 @@ label.screen-reader-text {
 	margin-bottom: 20px;
 }
 
+/* Image Captions */ 
+p.wp-caption-text {
+  text-align: center;
+  float: none;
+  margin-bottom: 0;
+  padding-bottom:.45em;
+  font-weight: 600;
+}
+
+.post-box .wp-caption {
+  margin-left: 10px;
+}
+
+/* all images in the content div */
 .content img {
 	border: 1px solid #000;	
 	padding: 4px;
 }
 
+figcaption p {
+	color: #444444;	
+	text-align: left;
+	color: #777777;
+}
+
+.featured-img-plus-caption {
+	
+}
+
+/*.figure {
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  padding: 12px 0 15px;
+  position: relative;
+}
+
+.half-w {
+  width: 49.92%;
+}*/
+/*
+.right {
+  float: right!important;
+}*/
+
+/*figure.featured-img-plus-caption figcaption {
+	width: 49.92%;
+}*/
+/* End Image Captions */ 
+
 /* ----- Post Thumbnails ----- */
 .content img.wp-post-image {}
 
+/* controls thumbnail on blog page */
 .content img.attachment-thumbnail {
 	float: left;
 	margin: 4px 20px 0 0;	
