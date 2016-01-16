@@ -15,7 +15,6 @@ html, body {
 	margin: 0px;
 	padding: 0px;
 }
-
 .clear
 {
 	clear: both;
@@ -23,9 +22,9 @@ html, body {
 .wrapper
 {
 	/*width: 998px;*/
-	/*margin-right: auto;
+	margin-right: auto;
 	margin-left: auto;
-	position: relative;*/
+	position: relative;
 }
 /*
 .header
@@ -74,7 +73,7 @@ html, body {
 }
 .menu li a
 {
-	font-family: 'Source Sans Pro', sans-serif;   
+	font-family: 'Source Sans Pro', sans-serif;	
 }
 .sub-menu li a
 {
@@ -422,7 +421,7 @@ form
 	padding: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-}
+} 
 .tab_title {
     color: #FFFFFF;
     float: left;
@@ -665,17 +664,14 @@ list-style-type: none;
 	cursor: hand;
 	font-size: 17px;
 	text-transform: uppercase;
-	/*height: 23px;*/
-	/*padding-top: 5px;*/
+	height: 23px;
+	padding-top: 5px;
 	font-weight: 200;
-	line-height: 17px;
 }
 .smartmenu ul li.current-menu-item a
 {
-	/*color: #feda25;*/
+	color: #feda25;
 	font-weight: 400;
-	
-	color: #FFC80B;
 }
 * html .smartmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
 	display: inline-block;
@@ -690,6 +686,6 @@ list-style-type: none;
 .smartmenu ul li a:hover{
 	color: #feda25;
 }
-
+	
 /* Holly Hack for IE \*/
 * html .smartmenu{height: 1%;} /*Holly Hack for IE7 and below*/
