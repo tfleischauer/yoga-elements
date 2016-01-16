@@ -3,6 +3,7 @@
 <!-- START CONTENT -->
 <h2 id="page-title"><?php wp_title(''); ?></h2>
 
+<!--<div class="content">-->
 <div class="content">
 
 <?php if (have_posts()) : ?>
@@ -11,6 +12,7 @@
 
 <?php while (have_posts()) : the_post(); // start the loop ?> 
 
+<!--<article class="col-md-9">-->
 <article>
 	<div class="inner_content post-box clear-fix">
 
@@ -23,8 +25,8 @@
         </h2>
           
             <p class="postmetadata">
-                <span class="date">Posted on <?php the_time('F jS, Y') ?></span> in 
-                <span class="cat"><?php the_category(', ') ?></span>
+                <!--<span class="date">Posted on--> <?php /* the_time('F jS, Y') */ ?><!--</span> in--> 
+                <!--<span class="cat">--><?php /* the_category(', ') */ ?><!--</span>-->
                 <span class="author"><?php _e('By');?> <?php the_author_posts_link(); ?></span>
                 <?php /*?><span class="comments">with <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></span><?php */?>
             </p>
@@ -48,9 +50,13 @@
 
 <?php endwhile; endif; // end the loop ?>
 
+<nav class="post-nav">
+    <p class="alignleft"><?php next_posts_link('&laquo; Older Posts') ?></p>
+    <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;') ?></p>
+</nav>
 
 
-<div class="delimiter"></div>
+<!--<div class="delimiter"></div>-->
 
 <!--</div>--> <!-- end .inner_content -->
 <!--</div>--> <!-- end .index -->
