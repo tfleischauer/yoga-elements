@@ -65,7 +65,7 @@
                       <img src="<?php echo get_template_directory_uri(); ?>/images/nl.gif" alt="Newsletter" title="Newsletter" width="41" height="30" />
                           <span>Sign up for Newsletter</span>
                   </a>
-              </div> <!-- end top_nav -->
+              </div> <!-- end .top_nav -->
           </div> <!-- end .col-md-4 .col-sm-5 -->
 	</div> <!-- end .container .wrapper -->
 
