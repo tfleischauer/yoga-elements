@@ -8,14 +8,13 @@ function yoga_register_custom_menus() {
 			'class-schedule-menu' => __( 'Class Schedule Menu' )
 		)
 	);
-	
+	// add_action - Hooks a function on to a specific action.
+	// init runs after WordPress has finished loading but before any headers are sent.
 	add_action( 'init', 'yoga_register_custom_menus' );
 	
 }
 
-
-
-// Add custom menus to Dashboard > menus when theme is active, if you have menus registered   
+// Add custom menus to Dashboard > Menus when theme is active, if you have menus registered   
 if ( function_exists( 'yoga_register_custom_menus' ) ) {
 	register_nav_menus(
 		array(
@@ -35,27 +34,32 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'upcoming-events-thumb', 258, 207 );
 }
 
-// create thumbnails for excerpts using the featured image
+// Create thumbnails for excerpts using the featured image
 if ( function_exists( 'add_theme_support' ) ) { 
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 140, 140, true );
 }
 
-/* Adding Theme Support - Post Thumbnails */
+// Add Theme Support - Post Thumbnails
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'post-thumbnails', array( 'post' ) );  // Posts only
 
-/* Add Custom Size Images */
+// Add Custom Size Images
 add_image_size('blog-140px-width', 140); /* 140 px width and unlimited height */
 add_image_size('blog-140xauto', 140, auto); /* 140 px width and auto height */
 add_image_size('home-140x140px-cropped', 140, 140, true); /* crops image to 140 x 140 px */
-/* End Adding Theme Support - Post Thumbnails */
 
-/* Register Sidebars */
+// Gets the caption for featured image - makes it a p tag
+function get_post_thumbnail_caption() {
+	if ( $thumb = get_post_thumbnail_id() )
+		return get_post( $thumb )->post_excerpt;
+}
+
+// Register Sidebars
 add_action( 'widgets_init', 'my_register_sidebars' );
 
 function my_register_sidebars() {
-	/* Register the primary sidebar. */
+	// Register the primary sidebar.
 	register_sidebar(
 		array(
 			'id' => 'primary',
@@ -67,7 +71,7 @@ function my_register_sidebars() {
 		)
 	);
 }
-/* End Register Sidebars */
+// End Register Sidebars
 
 // Remove Inline Styles from Captions
 add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
