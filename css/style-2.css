@@ -1,29 +1,11 @@
 @charset "UTF-8";
-/* CSS Document */
+/* CSS Document for Yoga Elements */
 
 /*** Global Styles ***/
 
 img {
 	max-width: 100%;	
 }
-
-hr {
-	/*border: 1px dashed red;*/
-	/*border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-top-style: dashed;
-	border-bottom-style: dashed;
-	border-top-color: #555555;
-	border-bottom-color: #555555*/;	
-}
-
-/*.clear-fix::after {
-  content: " ";
-  height: 0;
-  width: 0;
-  display: block;
-  clear: both;
-}*/
 
 .delimiter {
   clear: both;
@@ -33,9 +15,9 @@ hr {
 
 /*** Development Only ***/
 
-body {
-	/*background: url('../images/bg-980px-grid.png') center repeat-y;*/
-}
+/*body {
+	background: url('../images/bg-980px-grid.png') center repeat-y;
+}*/
 
 /*div {
 	outline: 1px solid red;
@@ -59,7 +41,7 @@ article {
 
 /*** End Development Only ***/
 
-/*** overrides style.css ***/
+/*** Overrides style.css ***/
 
 .wrapper {
 	margin-right: none;
@@ -67,7 +49,7 @@ article {
 	position: static;
 }
 
-/*Top level menu link items style*/
+/* Top level menu link items style */
 .smartmenu ul li a {
 	height: initial; /* A CSS value that will apply a property's initial value as defined in the CSS specification that defines the property */
 	/*padding-top: 0;*/
@@ -78,7 +60,7 @@ article {
 	color: #FFC80B;	
 	text-shadow: 1px 1px #444;
 }
-/*** End overrides style.css ***/
+/*** End Overrides style.css ***/
 
 
 /*** Primary Sidebar ***/
@@ -230,16 +212,6 @@ img.size-full {
 	float: left;	
 }
 
-.content h2 {
-	/*font-size: 2em;
-	margin-bottom: .325em;	
-	color: red;*/
-	
-	/*font-size: 30px;
-	margin-top: 20px;
-  	margin-bottom: 10px;*/
-}
-
 .single h2#page-title
 {
 	font-size: 30px;
@@ -339,14 +311,11 @@ figcaption p {
 .half-w {
   width: 49.92%;
 }*/
-/*
-.right {
-  float: right!important;
-}*/
 
 /*figure.featured-img-plus-caption figcaption {
 	width: 49.92%;
 }*/
+
 /* End Image Captions */ 
 
 /* ----- Post Thumbnails ----- */

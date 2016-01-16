@@ -1,22 +1,19 @@
 <?php get_header(); ?>
 
+<!-- index.php -->
+
 <!-- START CONTENT -->
 <h2 id="page-title"><?php wp_title(''); ?></h2>
 
-<!--<div class="content">-->
 <div class="content">
 
 <?php if (have_posts()) : ?>
-
-<!--<div class="index">-->
 
 <?php while (have_posts()) : the_post(); // start the loop ?> 
 
 <!--<article class="col-md-9">-->
 <article>
 	<div class="inner_content post-box clear-fix">
-
-	<!--<div class="blog-post white-bg box-shadow">-->
 
         <h2>
         	<a href="<?php the_permalink(); // link to the page or posting ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
@@ -38,13 +35,7 @@
             <p class="read-more"><a href="<?php the_permalink(); // link to the page or posting ?>">Read More</a></p>
             <?php edit_post_link('Edit this entry.', '<p><small>', '</small></p>'); ?>
             
-    </div> <!-- .post-box -->
-        
-	<!--</div>--> <!-- end .blog-post -->
-    
-    <!--</div>--> <!-- post-box -->
-    
-   <!-- <hr>-->
+    </div> <!-- end .inner_content .post-box .clear-fix -->
 
 </article>
 
@@ -55,11 +46,8 @@
     <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;') ?></p>
 </nav>
 
-
 <!--<div class="delimiter"></div>-->
 
-<!--</div>--> <!-- end .inner_content -->
-<!--</div>--> <!-- end .index -->
 </div> <!-- END .content -->
 
 <?php get_sidebar('primary'); ?>

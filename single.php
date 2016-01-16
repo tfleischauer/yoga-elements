@@ -8,13 +8,9 @@
 <?php
 	// Add in page logic via the loop
 	if (have_posts()) :
-		while (have_posts()) : the_post();
-
-		/* $post_id = get_the_ID(); */
-
-	//	the_title();
-		
+		while (have_posts()) : the_post();	
 ?>
+
 	<article id="post-<?php the_ID(); ?>" class="post">
     	<h2 id="page-title"><?php the_title(); ?></h2>
         <p class="postmetadata">
@@ -33,8 +29,8 @@
 		<? endwhile; endif; ?>
 	</article>
 </div> <!-- end content -->
-<!--</div>
-</div>-->
+<!--</div>--> <!-- end .home_content .col-md-12 -->
+<!--</div>--> <!-- end .row --> 
 <?php
     get_footer();
 ?>
