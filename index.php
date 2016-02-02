@@ -5,13 +5,12 @@
 <!-- START CONTENT -->
 <h2 id="page-title"><?php wp_title(''); ?></h2>
 
-<div class="content">
+<div class="content col-sm-12 col-md-9">
 
 <?php if (have_posts()) : ?>
 
 <?php while (have_posts()) : the_post(); // start the loop ?> 
 
-<!--<article class="col-md-9">-->
 <article>
 	<div class="inner_content post-box clear-fix">
 
@@ -46,9 +45,7 @@
     <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;') ?></p>
 </nav>
 
-<!--<div class="delimiter"></div>-->
-
-</div> <!-- END .content -->
+</div> <!-- end .content .col-sm-12 .col-md-9 -->
 
 <?php get_sidebar('primary'); ?>
 

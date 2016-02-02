@@ -1,10 +1,6 @@
-<!--<div class="row">-->
-<!--<aside id="sidebar-primary">-->
-<!--<aside class="sidebar-primary col-xs-pull-3">-->
-<!--<aside id="sidebar-primary" class="col-md-2">-->
-<aside id="sidebar-primary">
+<!-- sidebar-primary.php -->
 
-<!--<div class="col-md-3 col-md-offset-8">-->
+<aside class="col-sm-12 col-md-3 col-med-offset-9 sidebar-primary">
 
 <?php if ( is_active_sidebar( 'primary' ) ) : ?>
   <?php dynamic_sidebar( 'primary' ); ?>
@@ -15,7 +11,5 @@
 
     <?php endif; ?>  
 
-<!--</div> -->
+</aside> 
 
-</aside>
-<!--</div>-->
