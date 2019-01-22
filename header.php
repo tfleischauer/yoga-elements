@@ -69,8 +69,8 @@
         </div> <!-- end .col-md-4 .col-sm-5 -->
       </div> <!-- end .header .row -->
 
-  <div class="row" style="margin-bottom: 10px;">
-      <div class="col-md-12" style="padding: 0;">
+  <div class="row">
+      <div class="col-md-12">
               <div class="main_nav">
                 <div id="navigation" class="smartmenu navbar-default">
 

@@ -61,8 +61,16 @@ p {
 .smartmenu ul li a {
 	height: initial; /* A CSS value that will apply a property's initial value as defined in the CSS specification that defines the property */
 	/*padding-top: 0;*/
-	line-height: 17px;	
+	/*line-height: 17px; !important;*/
+	/*height: 17px;*/
+	
 }
+
+/* From tremonty89 on Fiverr */
+.smartmenu ul li a {
+	line-height: 8px !important;
+}
+
 
 .smartmenu ul li a:hover {
 	text-decoration: underline;	
@@ -78,12 +86,29 @@ p {
 }
 /*** End Overrides style.css ***/
 
+/*** Overrides fix.css ***/
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #444444;	
+}
+
+.footer .menu > li{
+	margin-bottom: 3px;
+}
+/*** End Overrides fix.css ***/
+
 /*** Overrides smartmenu.css ***/
 .smartmenu ul,
 .smartmenufloaty ul {
 	text-align: left;	
 }
+
+.smartmenu ul li a:hover,
+.smartmenu ul li a:focus {
+	color: #444444;	
+}
 /*** End Overrides smartmenu.css ***/
+
 
 /*** Primary Sidebar ***/
 .sidebar-primary {
@@ -166,12 +191,15 @@ article img {
 
 .content .inner_content {
 	padding-bottom: 0;	/* removes the 40px border from style.css line 137 */
+	/*padding-bottom: 20px;*/
+	/*overflow: hidden;*/
 }
 
 /* .inner_content .post-box are in the same div, 
 the first one after article */
 .post-box {
-  margin: 15px 0 0 0;
+  margin: 15px 0 10px 0;
+  overflow: hidden;
 }
 
 .post-box img {
@@ -199,21 +227,22 @@ the first one after article */
 .postmetadata {}
   
 p.postmetadata {
-  font-weight: 600;
   display: block;
   float: none;
   padding-bottom: .3em;
+  color: #FFC708;  /* yellow from logo */ 
 }
 
 .postmetadata a:link,
 .postmetadata a:visited {
-  color: #545353;
+  /*color: #545353;*/
+  color: #FFC708;  /* yellow from logo */
 }
 
 .postmetadata a:hover,
 .postmetadata a:focus {
   text-decoration: underline;
-  color: #000;
+  color: #444444;
 }
 
 img.size-full {
@@ -294,11 +323,11 @@ label.screen-reader-text {
 
 /* Image Captions */ 
 p.wp-caption-text {
-  text-align: center;
   float: none;
   margin-bottom: 0;
   padding-bottom:.45em;
-  font-weight: 600;
+  text-align: left;
+  color: #777777;
 }
 
 .post-box .wp-caption {
@@ -312,7 +341,6 @@ p.wp-caption-text {
 }
 
 figcaption p {
-	color: #444444;	
 	text-align: left;
 	color: #777777;
 }
@@ -361,6 +389,12 @@ figcaption {
 /* ----- End Post Thumbnails ----- */
 
 /*** END Blog Section ***/
+
+/*** index.php ***/
+h2#page-title {
+  margin-bottom: 15px;
+}
+/*** END index.php ***/
 
 @media (max-width: 991px) {
 	aside.sidebar-primary {
